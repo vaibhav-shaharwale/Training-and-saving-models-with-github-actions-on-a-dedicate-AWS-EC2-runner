@@ -52,7 +52,7 @@ jobs:
           cat model/metrics.txt > report.md
           # cml comment ![inline](./model/confusion_matrix.png) report.md
           echo '![](./model/confusion_matrix.png "Confusion Matrix")' >> report.md
-          cml comment create --pr --update report.md
+          cml comment create report.md
 
 
           # "cml send-comment" is deprecated, please use "cml comment create"
