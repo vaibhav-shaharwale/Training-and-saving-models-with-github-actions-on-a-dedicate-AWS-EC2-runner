@@ -1,8 +1,9 @@
 name: AWS_EC2_AS_SELF_HOSTED_RUNNER
-on: # Here we use two triggers: manually and daily at 08:00
-  workflow_dispatch:
-  schedule:
-    - cron: '0 8 * * *'
+# on: # Here we use two triggers: manually and daily at 08:00
+#   workflow_dispatch:
+#   schedule:
+#     - cron: '0 8 * * *'
+on: [push]
 jobs:
   deploy-runner:
     runs-on: ubuntu-latest
