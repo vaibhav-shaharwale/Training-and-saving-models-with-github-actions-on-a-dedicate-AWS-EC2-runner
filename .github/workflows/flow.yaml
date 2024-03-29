@@ -50,7 +50,9 @@ jobs:
 
           # Create CML report
           cat model/metrics.txt > report.md
-          cml publish model/confusion_matrix.png --md >> report.md
+          cml comment model/confusion_matrix.png >> report.md
+
+          # "cml publish" is deprecated since "cml comment" now supports "![inline](./asset.png)"
           cml comment create --pr --update report.md
 
 
