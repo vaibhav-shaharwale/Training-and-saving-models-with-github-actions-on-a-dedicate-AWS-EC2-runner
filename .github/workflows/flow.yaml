@@ -50,7 +50,7 @@ jobs:
 
           # Create CML report
           cat model/metrics.txt > report.md
-          cml publish model/confusion_matrix.png --md >> report.md
+          cml comment ![inline](./asset.png) >> report.md
           cml comment create --pr --update report.md
 
 
