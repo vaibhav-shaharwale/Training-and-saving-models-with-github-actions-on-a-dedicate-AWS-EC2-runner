@@ -51,4 +51,7 @@ jobs:
           # Create CML report
           cat model/metrics.txt > report.md
           cml publish model/confusion_matrix.png --md >> report.md
-          cml send-comment --pr --update report.md
+          cml comment create --pr --update report.md
+
+
+          # "cml send-comment" is deprecated, please use "cml comment create"
